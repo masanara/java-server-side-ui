@@ -1,0 +1,40 @@
+id: bf659ea6-14e3-4f2d-9a88-5ba0ec055eb0
+timestamp: 2023-09-08T22:45:45Z
+username: guest
+source: TAP-GUI
+accelerator:
+  name: java-server-side-ui
+  source:
+    image: 638721680862.dkr.ecr.ap-northeast-1.amazonaws.com/tap-images@sha256:be5c64e92d730a2583284f907b692a360b35decfd3804ce3df48fadbf98e78c5
+fragments:
+  - name: app-sso-client
+    source:
+      image: 638721680862.dkr.ecr.ap-northeast-1.amazonaws.com/tap-images@sha256:48c402e510166e5635083953f9d2b1a8f4f9cfa775a3e516cb24e86112658fd0
+  - name: build-wrapper-gradle
+    source:
+      image: 638721680862.dkr.ecr.ap-northeast-1.amazonaws.com/tap-images@sha256:5480259d6a29a11f0cc482cd304501d74ccd89dd7207f2d639d6f0d8eedc3bf8
+  - name: build-wrapper-maven
+    source:
+      image: 638721680862.dkr.ecr.ap-northeast-1.amazonaws.com/tap-images@sha256:195a3ca6585fa91c41292584a19c2807c72ecdf986ce860a7147451e89d467d4
+  - name: java-version
+    source:
+      image: 638721680862.dkr.ecr.ap-northeast-1.amazonaws.com/tap-images@sha256:fa976ccf1609cb69e74a0162f0f49581fd0d393003e2fbe5d54d12eae62b4ff9
+  - name: live-update
+    source:
+      image: 638721680862.dkr.ecr.ap-northeast-1.amazonaws.com/tap-images@sha256:19309486cfea374c354431751a3ece2392f9b8e7f12b3fea71db1684b6553cf8
+  - name: spring-boot-app-sso-auth-code-flow
+    source:
+      image: 638721680862.dkr.ecr.ap-northeast-1.amazonaws.com/tap-images@sha256:683927cd45259107d91925cebcf69d906df4f1f80e5fdeb64f7cccd4500f66f3
+  - name: tap-workload
+    source:
+      image: 638721680862.dkr.ecr.ap-northeast-1.amazonaws.com/tap-images@sha256:d9c7d8d322f0740666ba7c752a9174d1eb66274338c4f0e211edb1d448104c2a
+options:
+  artifactId: server-side-ui-starter
+  buildTool: maven
+  groupId: com.example
+  includeAppSsoIntegration: false
+  includeBuildToolWrapper: true
+  javaVersion: 11
+  liveUpdateIDESupport: true
+  packageName: com.example.serversideuistarter
+  projectName: java-server-side-ui
